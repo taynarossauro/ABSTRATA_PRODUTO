@@ -42,23 +42,19 @@ public class ProdutoVestuario extends Produto {
     }
 
     //Método para salvar o produto no banco
-    @Override
-    public String salvar() {
-        return "INSERT INTO ProdutoVestuario (nome, precoCusto, precoVenda, tamanho, cor, material) VALUES ('" 
-            + getNome() + "', " + getPrecoCusto() + ", " + getPrecoVenda() + ", '" + tamanho + "', '" + cor + "', '" + material + "');";
+    public void salvar() {
+    	System.out.println("Produto salvo no banco de dados.");
     }
-
+    
     //Método para deletar o produto do banco
     @Override
-    public String deletar() {
-        return "DELETE FROM ProdutoVestuario WHERE nome = '" + getNome() + "';";
+    public void deletar() {
+    	System.out.println("Produto deletado no banco de dados.");
     }
-
+    
     // Método para atualizar o produto no banco
     @Override
-    public String atualizar() {
-        return "UPDATE ProdutoVestuario SET precoCusto = " + getPrecoCusto() + ", precoVenda = " + getPrecoVenda() +
-               ", tamanho = '" + tamanho + "', cor = '" + cor + "', material = '" + material +
-               "' WHERE nome = '" + getNome() + "';";
+    public void atualizar() {
+    	System.out.println("Produto atualizado no banco de dados.");
     }
 }

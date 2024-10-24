@@ -12,12 +12,11 @@ public class Main {
         System.out.println("Lucro: " + produtoAlimenticio.calcularLucro());
         
         //Testando métodos para operações de banco de dados
-        System.out.println("Operações Banco de Dados\n");
-        System.out.println("Salvar: " + produtoAlimenticio.salvar());
-        System.out.println("Atualizar: " + produtoAlimenticio.atualizar());
-        System.out.println("Deletar: " + produtoAlimenticio.deletar() + "\n\n");
+        produtoAlimenticio.salvar();
+        produtoAlimenticio.atualizar();
+        produtoAlimenticio.deletar();
 
-
+        System.out.println("\n");
         
         // Instanciando um produto de vestuário
         ProdutoVestuario produtoVestuario = new ProdutoVestuario(
@@ -29,9 +28,8 @@ public class Main {
         System.out.println("Lucro: " + produtoVestuario.calcularLucro());
         
         //Testando métodos para operações de banco de dados
-        System.out.println("Operações Banco de Dados\n");
-        System.out.println("Salvar: " + produtoVestuario.salvar());
-        System.out.println("Atualizar: " + produtoVestuario.atualizar());
-        System.out.println("Deletar: " + produtoVestuario.deletar());
+        produtoVestuario.salvar();
+        produtoVestuario.atualizar();
+        produtoVestuario.deletar();
     }
 }

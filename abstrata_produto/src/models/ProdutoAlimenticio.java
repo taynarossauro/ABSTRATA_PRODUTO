@@ -21,7 +21,6 @@ public class ProdutoAlimenticio extends Produto {
     	return informacoesNutricionais;
     }
     
-    
     //Setters
     public void setInformacoesNutricionais(String informacoesNutricionais) {
     	this.informacoesNutricionais = informacoesNutricionais;
@@ -32,25 +31,20 @@ public class ProdutoAlimenticio extends Produto {
     }
     
     //Método para salvar o produto no banco
-    public String salvar() {
-    	return
-	        getNome() +  ", " + getPrecoCusto() + ", " + getPrecoVenda() + ", " + getDataValidade() + ", " +  getInformacoesNutricionais();
-    	//return "INSERT INTO Produto_Alimenticio (nome, precoCusto, precoVenda, dataValidade, informacoesNutricionais)\n" + "VALUES ";
+    public void salvar() {
+    	System.out.println("Produto salvo no banco de dados.");
     }
     
     //Método para deletar o produto do banco
     @Override
-    public String deletar() {
-        return "DELETE FROM ProdutoAlimenticio WHERE nome = '" + getNome() + "';";
+    public void deletar() {
+    	System.out.println("Produto deletado no banco de dados.");
     }
-    
     
     // Método para atualizar o produto no banco
     @Override
-    public String atualizar() {
-        return "UPDATE ProdutoAlimenticio SET precoCusto = " + getPrecoCusto() + ", precoVenda = " + getPrecoVenda() +
-               ", dataValidade = '" + dataValidade + "', informacoesNutricionais = '" + informacoesNutricionais +
-               "' WHERE nome = '" + getNome() + "';";
+    public void atualizar() {
+    	System.out.println("Produto atualizado no banco de dados.");
     }
 
 }

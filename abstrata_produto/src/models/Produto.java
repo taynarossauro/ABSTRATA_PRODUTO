@@ -44,7 +44,7 @@ public abstract class Produto {
     }
 
     // Métodos para operações de banco de dados
-    public abstract String salvar();
-    public abstract String deletar();
-    public abstract String atualizar();
+    public abstract void salvar();
+    public abstract void deletar();
+    public abstract void atualizar();
 }
